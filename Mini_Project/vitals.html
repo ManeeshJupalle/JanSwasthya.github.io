@@ -35,6 +35,7 @@
         a {
             font-weight: bold;
         }
+
         .form-control:focus {
             box-shadow: none;
             border-color: #BA68C8
@@ -157,45 +158,71 @@
                         <h4 class="text-right">Vitals-Entry</h4>
                     </div>
                     <form>
-                    <div class="row mt-2">
-                        <div class="col-md-6"><label class="labels">Gender</label>
-                            <select class="form-control" id="sel1" required>
-                                <option></option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Other</option>
-                            </select>
+                        <div class="row mt-2">
+                            <div class="col-md-6"><label class="labels">Gender</label>
+                                <select class="form-control" id="sel1" required>
+                                    <option></option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6"><label class="labels">Age</label><input type="text"
+                                    class="form-control" value="" placeholder="Enter Age" required></div>
                         </div>
-                        <div class="col-md-6"><label class="labels">Age</label><input type="text" class="form-control"
-                                value="" placeholder="Enter Age" required></div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-6"><label class="labels">Height</label><input required type="number"
-                                class="form-control" placeholder="in cm's" value=""></div>
-                        <div class="col-md-6"><label class="labels">Weight</label><input required type="number"
-                                class="form-control" value="" placeholder="in Kg"></div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-6"><label class="labels">Blood-Group</label>
-                            <select class="form-control" required>
-                                <option></option>
-                                <option>A+ve</option>
-                                <option>A-ve</option>
-                                <option>B+ve</option>
-                                <option>B-ve</option>
-                                <option>AB+ve</option>
-                                <option>AB-ve</option>
-                                <option>O+ve</option>
-                                <option>O-ve</option>
-                            </select>
+                        <div class="row mt-3">
+                            <div class="col-md-6"><label class="labels">Height</label><input required type="number"
+                                    class="form-control" placeholder="in cm's" value=""></div>
+                            <div class="col-md-6"><label class="labels">Weight</label><input required type="number"
+                                    class="form-control" value="" placeholder="in Kg"></div>
                         </div>
-                        <div class="col-md-6"><label class="labels">Medications Active</label><textarea
-                                class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        <div class="row mt-3">
+                            <div class="col-md-6"><label class="labels">Blood-Group</label>
+                                <select class="form-control" required>
+                                    <option></option>
+                                    <option>A+ve</option>
+                                    <option>A-ve</option>
+                                    <option>B+ve</option>
+                                    <option>B-ve</option>
+                                    <option>AB+ve</option>
+                                    <option>AB-ve</option>
+                                    <option>O+ve</option>
+                                    <option>O-ve</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6"><label class="labels">Medications Active</label><textarea
+                                    class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Save
-                            Details</button></div>
-                        </form>
+                        <button type="submit" class="btn btn-primary mt-5 text-center profile-button"
+                            data-toggle="modal" data-target="#exampleModalCenter">
+                            Save Details
+                        </button>
+
+
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle"><kbd>Profile Entry</kbd></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" style="color: black;">
+                                        Make sure your data has been filled correctly and ensure you have uploaded the
+                                        Doctor prescription if any Medications currently active
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="col-md-4">
