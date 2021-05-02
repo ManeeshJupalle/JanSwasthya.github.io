@@ -138,7 +138,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Book an Appointment!</h5>
                     <p class="card-text">Difficulty finding Doctors? Don't worry we are here to help you Book an
-                        Appointment with the Specialized Doctor's!</p>
+                        Appointment with the Specialized Doctors!</p>
                 </div>
             </div><br>
         </div>
@@ -168,7 +168,7 @@
             </div><br>
         </div>
     </div>
-    </div>
+  </div>
     <footer class="bg-dark">
         <div class="row">
             <div class="col align-self-center">
@@ -185,6 +185,15 @@
             </div>
         </div><br>
     </footer>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+    <df-messenger
+      df-cx="true"
+      location="asia-northeast1"
+      chat-title="Healthcare"
+      agent-id="ae3cb937-5d13-4a48-b610-cd9bcaf55aea"
+      language-code="en"
+    ></df-messenger>
     <script>
         const phoneInputField = document.querySelector("#phone");
         const phoneInput = window.intlTelInput(phoneInputField, {
